@@ -1341,8 +1341,8 @@ ul.social-intro {
 
 .social-intro li {
   display: inline-block;
-   margin-right: 14px;
-   float: left;
+  margin-right: 14px;
+  float: left;
 }
 
 ul.social-intro li a {
@@ -1358,24 +1358,24 @@ ul.social-intro li a {
   border-radius: 50%;
 }
 
+a:hover {
+  cursor: pointer !important;
+}
+
 .bl-main>section:nth-child(4).bl-expand ul.social-intro li.facebook a {
   background: #3b5998;
 }
 
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li.twitter a {
-  background: #1da1f2;
-}
-
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li.google-plus a {
-  background: #dd4b39;
+.bl-main>section:nth-child(4).bl-expand ul.social-intro li.instagram a {
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 
 .bl-main>section:nth-child(4).bl-expand ul.social-intro li.linkedin a {
   background: #0077b5;
-}
-
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li.dribbble a {
-  background: #ea4c89;
 }
 
 
