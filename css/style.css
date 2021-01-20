@@ -707,9 +707,9 @@ section.bl-expand .bl-icon-close {
 }
 
 .bl-main>section.topleft .bl-box .ah-headline.clip .my-name {
-  font-size: 55px;
+  font-size: 45px;
   display: block;
-  margin: 30px 0;
+  margin: 20px 0;
   color: #555;
 }
 
@@ -1886,8 +1886,8 @@ body.blog .pagination li a i {
   }
 
   .bl-main>section.topleft .bl-box .ah-headline.clip .my-name {
-    font-size: 35px;
-    margin: 20px 0;
+    font-size: 25px;
+    margin: 10px 0;
   }
 
   .bl-main>section.topleft .bl-box h3 span {
