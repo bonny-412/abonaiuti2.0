@@ -274,10 +274,6 @@ input[type="submit"]:focus {
     overflow: auto;
   }
 
-  .header-titles {
-
-  }
-
   /* --- Navigation --- */
   ul.main-menu {
     position: absolute;
@@ -1357,7 +1353,7 @@ textarea.form-control, textarea.form-control:focus {
   list-style: none;
 }
 
-.knowledges li {;
+.knowledges li {
   display: inline-block;
   background-color: #04b4e0;
   border-radius: 3px;
