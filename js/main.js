@@ -129,6 +129,12 @@
             $('.sidebar-toggle').on("click", function () {
                 $('#blog-sidebar').toggleClass('open');
             });
+
+            init_pointer({
+                pointerColor: "#04b4e0",
+                ringSize: 15,
+                ringClickSize: 10
+            });
     
             // Initialize Portfolio grid
             var $portfolio_container = $(".portfolio-grid");
