@@ -135,6 +135,9 @@
                 ringSize: 15,
                 ringClickSize: 10
             });
+
+            $('.portfolio-item-img a').miniPreview({prefetch: 'none'});
+            
     
             // Initialize Portfolio grid
             var $portfolio_container = $(".portfolio-grid");

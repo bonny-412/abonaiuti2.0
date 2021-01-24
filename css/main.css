@@ -2889,3 +2889,12 @@ blockquote {
     width: 33px;
     height: 33px;
 }
+
+
+.description {
+  display:none;
+  position:absolute;
+  border:1px solid #000;
+  width:400px;
+  height:400px;
+}
