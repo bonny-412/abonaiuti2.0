@@ -18,14 +18,14 @@
         padding: 15px 0;
         width: 70px;
         right: -90px;
-        background-color: #444;
+        background: var(--bg-primary);
         border-radius: 35px;
         z-index: 999;
         list-style: none;
         top: 0;
-        -webkit-box-shadow: 0 0 30px -5px rgba(0,0,0,.15);
-        -moz-box-shadow: 0 0 30px -5px rgba(0,0,0,.15);
-        box-shadow: 0 0 30px -5px rgba(0,0,0,.15);
+        -webkit-box-shadow: var(--color-shadow);
+        -moz-box-shadow: var(--color-shadow);
+        box-shadow: var(--color-shadow);
     }
 
     ul.main-menu a {
@@ -51,7 +51,7 @@
         font-size: 30px;
     }
 
-    ul.main-menu .link-text {
+    ul.main-menu .link-text, ul.main-menu .link-text-darkMode {
         position: absolute;
         width: auto;
         visibility: hidden;
@@ -77,6 +77,10 @@
         visibility: visible;
         opacity: 1;
     }
+
+    ul.main-menu li:nth-child(6) {
+        border-top: 2px solid #b5b6b7;
+    }
     /* --- End Navigation --- */
 }
 
@@ -86,21 +90,21 @@
         padding: 10px 0;
         width: 60px;
         right: -80px;
-        background-color: #444;
+        background: var(--bg-primary);
         border-radius: 35px;
         z-index: 98;
         list-style: none;
         bottom: 0;
-        -webkit-box-shadow: 0 0 30px -5px rgba(0,0,0,.15);
-        -moz-box-shadow: 0 0 30px -5px rgba(0,0,0,.15);
-        box-shadow: 0 0 30px -5px rgba(0,0,0,.15);
+        -webkit-box-shadow: var(--color-shadow);
+        -moz-box-shadow: var(--color-shadow);
+        box-shadow: var(--color-shadow);
     }
 
     .lmpixels-arrows-nav div {
         display: block;
         position: relative;
         text-align: center;
-        color: #b5b6b7;
+        color: var(--color-txt);
         padding: 10px;
         font-size: 24px;
         -webkit-transition: all 0.3s ease-in-out;

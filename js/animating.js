@@ -36,16 +36,18 @@ var PageTransitions = (function ($, options) {
             // Adding click event to main menu link
             $('.nav-anim').on("click", function (e) {
                 e.preventDefault();
-                if (isAnimating) {
-                    return false;
+                if($(this).attr('id') != 'darkMode') {
+                    if (isAnimating) {
+                        return false;
+                    }
+                    var pageTrigger = $(this);
+        
+                    activeMenuItem( pageTrigger );
+        
+                    Animate( pageTrigger );
+        
+                    location.hash = $(this).attr('href');
                 }
-                var pageTrigger = $(this);
-    
-                activeMenuItem( pageTrigger );
-    
-                Animate( pageTrigger );
-    
-                location.hash = $(this).attr('href');
     
             });
     

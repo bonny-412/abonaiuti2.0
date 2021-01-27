@@ -20,10 +20,11 @@
 
 .animated-section {
   position: absolute;
-  background-color: #222;
+  background: var(--bg-primary);
   height: 100%;
   width: 100%;
-  border-radius: 30px;
+  border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
   padding: 60px;
   opacity: 0;
   overflow: auto;
@@ -42,7 +43,10 @@
 
 .single-page-content {
   position: absolute;
-  background-color: #222;
+  background-color: var(--bg-primary);
+  box-shadow: var(--color-shadow);
+  -webkit-box-shadow: var(--color-shadow);
+	-moz-box-shadow: var(--color-shadow);
   height: 100%;
   width: 100%;
   border-radius: 30px;

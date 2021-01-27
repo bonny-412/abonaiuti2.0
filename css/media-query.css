@@ -16,9 +16,16 @@ max-width: calc(100% - 330px);
     .menu-toggle {
     display: none;
     }
+    #input-dark-mode {
+        display: inline-flex;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
+    #input-dark-mode {
+        display: inline-flex;
+    }
+
     .header {
     position: absolute;
     width: 100%;
@@ -114,7 +121,7 @@ max-width: calc(100% - 330px);
     display: none;
     }
 
-    ul.main-menu .link-text {
+    ul.main-menu .link-text, ul.main-menu .link-text-darkMode {
     font-size: 16px;
     line-height: 21px;
     }

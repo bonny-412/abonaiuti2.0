@@ -115,7 +115,7 @@
     width: 100%;
     display: block;
     margin: 0 0 15px 0;
-    background-color: #333;
+    background-color: var(--bg-primary);
     padding: 20px 10px;
     border: 1px solid #444;
     -webkit-box-shadow: none;
@@ -127,6 +127,17 @@
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+}
+
+.lm-info-block:hover {
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0 12px 17px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 12px 17px rgba(0, 0, 0, 0.12);
+    -o-box-shadow: 0 12px 17px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 17px rgba(0, 0, 0, 0.12);
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
 }
 
 .lm-info-block i {
@@ -237,7 +248,7 @@
 }
 
 .timeline-second-style .item-period {
-    color: #aaa;
+    color: var(--color-txt-period);
     margin: 3px 0;
     font-size: 14px;
     line-height: 1.4em;
@@ -249,7 +260,7 @@
     font-size: 13px;
     font-weight: 300;
     line-height: 1.45em;
-    color: #a5a6a7;
+    color: var(--color-txt-company);
 }
 
 .timeline-second-style .timeline-item:last-child .right-part {
@@ -308,7 +319,7 @@
     position: relative;
     float: right;
     margin: 0 0 4px;
-    color: #aaa;
+    color: var(--color-txt);
 }
 
 .skills-second-style .skill-percentage {

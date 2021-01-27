@@ -8,6 +8,27 @@
 /* ------------------------------------------------------------
 2. General Styles
 ------------------------------------------------------------ */
+:root {
+  --bg-body: #1e1e2f;
+  --color-shadow: 0 1px 20px 0 rgb(0 0 0 / 75%);
+  --bg-primary: #27293d;
+  --color-txt: #eee;
+  --color-txt-period: #aaa;
+  --color-txt-company: #a5a6a7;
+  --color-txt-body: #d5d5d5;
+}
+
+.white {
+  --bg-body: #f5f6fa;
+  --color-shadow: 0 1px 15px 0 hsla(0,0%,48.2%,.05);
+  --bg-primary: #fff;
+  --color-txt: gray;
+  --color-txt-period: #aaa;
+  --color-txt-company: #a5a6a7;
+  --color-txt-body: #d5d5d5;
+
+}
+
 html {
   margin: 0;
   width: 100%;
@@ -17,7 +38,7 @@ html {
 }
 
 body {
-  background-color: #04b4e0;
+  background-color: var(--bg-body);
   margin: 0;
   width: 100%;
   height: 100%;
@@ -33,26 +54,8 @@ body {
   background-size: cover;
 }
 
-body {
-	background: linear-gradient(-45deg, #131b49, #122968, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 h1, h2, h3, h4, h5, h6 {
-  color: #eee;
+  color: var(--color-txt);
   font-family: 'Poppins', Helvetica, sans-serif;
   font-weight: 600;
 }
@@ -117,10 +120,10 @@ p {
   min-height: 80vh;
   margin: 10vh auto;
   padding: 0;
-  background-color: #444;
-  -webkit-box-shadow: 0 0 100px -5px rgba(0,0,0,.25);
-  -moz-box-shadow: 0 0 100px -5px rgba(0,0,0,.25);
-  box-shadow: 0 0 100px -5px rgba(0,0,0,.25);
+  background: linear-gradient(10deg,#389466,#04b4e0);
+  -webkit-box-shadow: var(--color-shadow);
+  -moz-box-shadow: var(--color-shadow);
+  box-shadow: var(--color-shadow);
   border-radius: 32px;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -144,7 +147,7 @@ input[type="submit"],
   border: 0;
   outline: 0;
   border: 2px solid #04b4e0;
-  color: #f5f5f5;
+  color: var(--color-txt);
   text-shadow: none;
   background-color: transparent;
   border-radius: 30px;
@@ -175,7 +178,7 @@ input[type="button"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   background-color: #04b4e0;
-  color: #fff;
+  color: var(--color-txt);
   border: 2px solid #04b4e0;
 }
 
@@ -183,14 +186,14 @@ input[type="submit"]:focus {
   border-color: #d5d5d5;
   background-color: transparent;
   box-shadow: 0px 10px 10px -8px rgba(0,0,0,.3);
-  color: #f5f5f5;
+  color: var(--color-txt);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  border-color: #d5d5d5;
-  background-color: #d5d5d5;
+  border-color: var(--color-txt);
+  background-color: var(--color-txt);
 }
 
 .animated {

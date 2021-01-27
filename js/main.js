@@ -86,11 +86,19 @@
             });
             // Mobile menu hide on main menu item click
             $('.main-menu').on("click", "a", function (e) {
-                mobileMenuHide();
+                if($(this).attr('id') != 'darkMode') {
+                    mobileMenuHide();
+                }else {
+                    $('.fa-lightbulb').css("color", "yellow");
+                }
             });
             // Sidebar toggle
             $('.sidebar-toggle').on("click", function () {
                 $('#blog-sidebar').toggleClass('open');
+            });
+
+            $('#darkMode').on('click', function() {
+                $('.link-text-darkMode').prop( "checked", true );
             });
 
             init_pointer({
