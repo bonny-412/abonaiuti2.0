@@ -32,6 +32,7 @@
     //End function to DarkMode
 
     // Start Contact form validator
+    //https://css-tricks.com/using-netlify-forms-and-netlify-functions-to-build-an-email-sign-up-widget/
     $(function () {
         $('#contact_form').validator();
         $('#contact_form').on('submit', function (e) {
