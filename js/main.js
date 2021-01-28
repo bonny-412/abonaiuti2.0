@@ -31,6 +31,23 @@
     }
     //End function to DarkMode
 
+    // Start function to return submit
+    const processForm = form => {
+        const data = new FormData(form)
+        data.append('form-name', 'newsletter');
+        fetch('/', {
+            method: 'POST',
+            body: data,
+        })
+        .then(() => {
+            form.innerHTML = `<div class="form--success">Almost there! Check your inbox for a confirmation e-mail.</div>`;
+        })
+        .catch(error => {
+            form.innerHTML = `<div class="form--error">Error: ${error}</div>`;
+        })
+    }
+    //End function to return submit
+
     // Start Contact form validator
     //https://css-tricks.com/using-netlify-forms-and-netlify-functions-to-build-an-email-sign-up-widget/
     $(function () {
@@ -137,16 +154,23 @@
             //End Typed text
 
             //Form Controls
-            $('.form-control')
-                .val('')
-                .on("focusin", function(){
-                    $(this).parent('.form-group').addClass('form-group-focus');
-                })
-                .on("focusout", function(){
-                    if($(this).val().length === 0) {
-                        $(this).parent('.form-group').removeClass('form-group-focus');
-                    }
+            $('.form-control').val('').on("focusin", function(){
+                $(this).parent('.form-group').addClass('form-group-focus');
+            }).on("focusout", function(){
+                if($(this).val().length === 0) {
+                    $(this).parent('.form-group').removeClass('form-group-focus');
+                }
+            });
+
+            const emailForm = document.querySelector('.contact-form')
+            if (emailForm) {
+                emailForm.addEventListener('submit', e => {
+                    e.preventDefault();
+                    processForm(emailForm);
                 });
+            }
+
+            
         });
     
     })(jQuery);
