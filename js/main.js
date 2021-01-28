@@ -34,7 +34,7 @@
     // Start function to return submit
     const processForm = form => {
         const data = new FormData(form)
-        data.append('form-name', 'newsletter');
+        data.append('form-name', 'contact_form');
         fetch('/', {
             method: 'POST',
             body: data,
