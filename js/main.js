@@ -1,8 +1,9 @@
 (function($) {
-    "use strict";    
+    "use strict";
+
     // Start Hide Mobile menu
     function mobileMenuHide() {
-        var windowWidth = $(window).width(),
+        let windowWidth = $(window).width(),
             siteHeader = $('#site_header');
         if (windowWidth < 1025) {
             siteHeader.addClass('mobile-menu-hide');
@@ -15,36 +16,35 @@
         }
     }
     // End Hide Mobile menu
-    
-    // Start Custom scroll
-        function customScroll() {
-            var windowWidth = $(window).width();
-            if (windowWidth > 1024) {
-                $('.animated-section, .single-page-content').each(function() {
-                    $(this).perfectScrollbar();
-                });
-            } else {
-                $('.animated-section, .single-page-content').each(function() {
-                $(this).perfectScrollbar('destroy');
-            });
+
+    // Start function to DarkMode
+    function activeDarkMode(isDarkMode) {
+        if(isDarkMode) {
+            $('#input-dark-mode').prop( "checked", true );
+            document.body.classList.toggle('white');
+            $('.fa-lightbulb').css("color", "#efef0b");
+        }else {
+            $('#input-dark-mode').prop( "checked", false );
+            document.body.classList.toggle('white');
+            $('.fa-lightbulb').css("color", "#b5b6b7");
         }
     }
-    // End Custom scroll
-    
+    //End function to DarkMode
+
     // Start Contact form validator
     $(function () {
         $('#contact_form').validator();
         $('#contact_form').on('submit', function (e) {
             if (!e.isDefaultPrevented()) {
-                var url = "contact_form/contact_form.php";
+                let url = "contact_form/contact_form.php";
                 $.ajax({
                     type: "POST",
                     url: url,
                     data: $(this).serialize(),
                     success: function (data) {
-                        var messageAlert = 'alert-' + data.type;
-                        var messageText = data.message;
-                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                        let messageAlert = 'alert-' + data.type;
+                        let messageText = data.message;
+                        let alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
                         if (messageAlert && messageText) {
                             $('#contact_form').find('.messages').html(alertBox);
                             $('#contact_form')[0].reset();
@@ -62,7 +62,7 @@
         // Animation on Page Loading
         $(".preloader").fadeOut( 800, "linear" );
             // initializing page transition.
-            var ptPage = $('.animated-sections');
+            let ptPage = $('.animated-sections');
             if (ptPage[0]) {
                 PageTransitions.init({
                     menu: 'ul.main-menu',
@@ -70,14 +70,12 @@
             }
         }).on('resize', function() { //Resize
             mobileMenuHide();
-            $('.animated-section').each(function() {
-                $(this).perfectScrollbar('update');
-            });
-            customScroll();
         });
 
         // On Document Load
         $(document).on('ready', function() {
+            var isDarkMode = true;
+
             // Mobile menu
             $('.menu-toggle').on("click", function () {
                 $('#site_header').addClass('animate');
@@ -88,8 +86,6 @@
             $('.main-menu').on("click", "a", function (e) {
                 if($(this).attr('id') != 'darkMode') {
                     mobileMenuHide();
-                }else {
-                    $('.fa-lightbulb').css("color", "yellow");
                 }
             });
             // Sidebar toggle
@@ -98,7 +94,21 @@
             });
 
             $('#darkMode').on('click', function() {
-                $('.link-text-darkMode').prop( "checked", true );
+                activeDarkMode(isDarkMode);
+                if(isDarkMode) {
+                    isDarkMode = false;
+                }else {
+                    isDarkMode = true;
+                }
+            });
+
+            $('#input-dark-mode').on('click', function() {
+                activeDarkMode(isDarkMode);
+                if(isDarkMode) {
+                    isDarkMode = false;
+                }else {
+                    isDarkMode = true;
+                }
             });
 
             init_pointer({
@@ -109,19 +119,17 @@
 
             $('.portfolio-item-img a').miniPreview({prefetch: 'none'});
     
-            customScroll();
-
             //Start Typed text
-            var elements = document.getElementsByClassName('txt-rotate');
-            for (var i=0; i<elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-rotate');
-                var period = elements[i].getAttribute('data-period');
+            let elements = document.getElementsByClassName('txt-rotate');
+            for (let i=0; i<elements.length; i++) {
+                let toRotate = elements[i].getAttribute('data-rotate');
+                let period = elements[i].getAttribute('data-period');
                 if (toRotate) {
                     new TxtRotate(elements[i], JSON.parse(toRotate), period);
                 }
             }
             // INJECT CSS
-            var css = document.createElement("style");
+            let css = document.createElement("style");
             css.type = "text/css";
             css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
             document.body.appendChild(css);

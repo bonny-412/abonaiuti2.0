@@ -16,6 +16,8 @@
   --color-txt-period: #aaa;
   --color-txt-company: #a5a6a7;
   --color-txt-body: #d5d5d5;
+  --color-txt-title: #f5f5f5;
+  --bg-item-portfolio: rgba(0,0,0,.05);
 }
 
 .white {
@@ -26,7 +28,8 @@
   --color-txt-period: #aaa;
   --color-txt-company: #a5a6a7;
   --color-txt-body: #d5d5d5;
-
+  --color-txt-title: #4f4f4f;
+  --bg-item-portfolio: rgba(243, 243, 243, 0.05);
 }
 
 html {

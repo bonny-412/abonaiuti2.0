@@ -22,9 +22,6 @@ max-width: calc(100% - 330px);
 }
 
 @media only screen and (max-width: 1024px) {
-    #input-dark-mode {
-        display: inline-flex;
-    }
 
     .header {
     position: absolute;
@@ -45,13 +42,10 @@ max-width: calc(100% - 330px);
     -o-transition: all .25s ease-in-out;
     -ms-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
-    }
 
-    .header .copyrights {
-    right: 0;
-    width: 100%;
-    position: relative;
-    margin-top: 30px;
+    -webkit-box-shadow: var(--color-shadow);
+    -moz-box-shadow: var(--color-shadow);
+    box-shadow: var(--color-shadow);
     }
 
     .page {
@@ -87,6 +81,10 @@ max-width: calc(100% - 330px);
     .header-photo {
     max-width: 130px;
     margin-bottom: 25px;
+    }
+
+    .header-darkMode {
+        display: block;
     }
 
     .mobile-menu-hide {
@@ -217,7 +215,7 @@ max-width: calc(100% - 330px);
     }
 
     .lmpixels-arrows-nav {
-    background-color: rgba(0,0,0,.6);
+    background-color: var(--bg-primary);
     width: 48px;
     right: 10px;
     bottom: 10px;

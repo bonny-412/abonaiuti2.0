@@ -183,7 +183,7 @@ var PageTransitions = (function ($, options) {
             }
     
             // Checking if the animation number is out of bound, max allowed value is 1 to 4.
-            if (selectedAnimNumber > 67) {
+            if (selectedAnimNumber > 4) {
                 alert("Transition.js : Invalid 'data-animation' attribute configuration. Animation number should not be greater than 4");
                 return false;
             }
