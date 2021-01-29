@@ -33,45 +33,59 @@
 
     // Start function to return submit
     const processForm = form => {
-        const data = new FormData(form)
-        data.append('form-name', 'contact_form');
-        fetch('/', {
-            method: 'POST',
-            body: data,
-        })
-        .then(() => {
-            form.innerHTML = `<div class="form--success">Almost there! Check your inbox for a confirmation e-mail.</div>`;
-        })
-        .catch(error => {
-            form.innerHTML = `<div class="form--error">Error: ${error}</div>`;
-        })
+        let title = "";
+        let message = "";
+        let esito = false;
+        debugger;
+        try {
+            const data = new FormData(form)
+            data.append('form-name', 'contact_form');
+            fetch('/', {
+                method: 'POST',
+                body: data,
+            }).then(() => {
+                title = "Messaggio inviato";
+                message = "Grazie per avermi contattato, risponderò al più presto.";
+                esito = true;
+            }).catch(error => {
+                title = "OoooPS!";
+                message = "Mi dispiace, ma si è verificato un errore durante l'invio del messaggio. Riprovare più tardi.";
+                esito = false;
+            });
+        }catch(err) {
+            title = "OoooPS!";
+            message = "Mi dispiace, ma si è verificato un errore durante l'invio del messaggio. Riprovare più tardi.";
+            esito = false;
+        }
+        modalOpen(title, message, esito);
     }
     //End function to return submit
 
+    // Start function modal
+    function modalOpen(title, message, esito) {
+        $('.modal-wrapper').addClass('open');
+        if(title && message) {
+            $('.modal-title').text(title);
+            $('.modal-msg').text(message);
+        }
+        $('.modal').addClass('in');
+        if(esito) {
+            $('.modal-image').append('<i class="far fa-check-circle fa-3x"></i>');
+        }else {
+            $('.modal-image').append('<i class="far fa-times-circle fa-3x"></i>');
+        }
+    };
+
+    function modalClose() {
+        $('.modal').removeClass('in');
+        $('.modal-wrapper').removeClass('open');
+        $('.modal-image').empty();
+    };
+// End function modal
+
     // Start Contact form validator
-    //https://css-tricks.com/using-netlify-forms-and-netlify-functions-to-build-an-email-sign-up-widget/
     $(function () {
         $('#contact_form').validator();
-        $('#contact_form').on('submit', function (e) {
-            if (!e.isDefaultPrevented()) {
-                let url = "contact_form/contact_form.php";
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    data: $(this).serialize(),
-                    success: function (data) {
-                        let messageAlert = 'alert-' + data.type;
-                        let messageText = data.message;
-                        let alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                        if (messageAlert && messageText) {
-                            $('#contact_form').find('.messages').html(alertBox);
-                            $('#contact_form')[0].reset();
-                        }
-                    }
-                });
-                return false;
-            }
-        });
     });
     // End Contact form validator
     
@@ -165,11 +179,15 @@
             const emailForm = document.querySelector('.contact-form')
             if (emailForm) {
                 emailForm.addEventListener('submit', e => {
-                    e.preventDefault();
-                    processForm(emailForm);
+                    if($('.btn-send').hasClass( "disabled" ) == false) {
+                        e.preventDefault();
+                        processForm(emailForm);
+                    }else {
+                        return false;
+                    }
                 });
             }
-
+            $('.-close').click(modalClose);
             
         });
     

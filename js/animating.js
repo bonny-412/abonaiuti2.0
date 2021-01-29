@@ -79,17 +79,19 @@ var PageTransitions = (function ($, options) {
     
             $(".lmpixels-arrow-right").click(function() {
                 var activeItem = $('.main-menu a.active').parent("li");
-                activeItem.next("li").children("a").click();
-                if ( activeItem.is(':last-child') ) {
-                    $('.main-menu li:first-child').children("a").click();
+                if ( activeItem.is(':nth-child(5)') ) {
+                    $('.main-menu li:nth-child(1)').children("a").click();
+                }else {
+                    activeItem.next("li").children("a").click();
                 }
             });
-    
+            
             $(".lmpixels-arrow-left").click(function() {
                 var activeItem = $('.main-menu a.active').parent("li");
-                activeItem.prev("li").children("a").click();
                 if ( activeItem.is(':first-child') ) {
-                    $('.main-menu li:last-child').children("a").click();
+                    $('.main-menu li:nth-child(5)').children("a").click();
+                }else {
+                    activeItem.prev("li").children("a").click();
                 }
             });
         }

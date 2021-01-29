@@ -236,6 +236,8 @@ textarea.form-control, textarea.form-control:focus {
   margin: -2px 0 0 10px;
   color: #fff;
   background: #ff4e4e;
+  z-index: 99;
+  box-shadow: 0 1px 20px 0 rgb(160 19 19 / 64%);
 }
 
 .form-group .help-block:after {
@@ -327,4 +329,10 @@ textarea.form-control, textarea.form-control:focus {
     -moz-transform: translateZ(0);
     transform: translateZ(0);
 }
+
+.form-button-container {
+  text-align: center;
+  margin: 30px;
+}
+
 /* /Form controls */
