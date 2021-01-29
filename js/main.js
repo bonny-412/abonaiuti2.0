@@ -33,7 +33,6 @@
 
     // Start function to return submit
     const processForm = form => {
-        debugger;
         const data = new FormData(form)
         data.append('form-name', 'contact_form');
         fetch('/', {
