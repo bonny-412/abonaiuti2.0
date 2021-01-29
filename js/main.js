@@ -33,8 +33,8 @@
 
     // Start function to return submit
     const processForm = form => {
-        let title = "";
-        let message = "";
+        let title = null;
+        let message = null;
         let esito = false;
         debugger;
         try {
@@ -64,7 +64,7 @@
     // Start function modal
     function modalOpen(title, message, esito) {
         $('.modal-wrapper').addClass('open');
-        if(title && message) {
+        if(title != null && message != null) {
             $('.modal-title').text(title);
             $('.modal-msg').text(message);
         }
