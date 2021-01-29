@@ -33,31 +33,17 @@
 
     // Start function to return submit
     const processForm = form => {
-        let title = null;
-        let message = null;
-        let esito = false;
         debugger;
-        try {
-            const data = new FormData(form)
-            data.append('form-name', 'contact_form');
-            fetch('/', {
-                method: 'POST',
-                body: data,
-            }).then(() => {
-                title = "Messaggio inviato";
-                message = "Grazie per avermi contattato, risponderò al più presto.";
-                esito = true;
-            }).catch(error => {
-                title = "OoooPS!";
-                message = "Mi dispiace, ma si è verificato un errore durante l'invio del messaggio. Riprovare più tardi.";
-                esito = false;
-            });
-        }catch(err) {
-            title = "OoooPS!";
-            message = "Mi dispiace, ma si è verificato un errore durante l'invio del messaggio. Riprovare più tardi.";
-            esito = false;
-        }
-        modalOpen(title, message, esito);
+        const data = new FormData(form)
+        data.append('form-name', 'contact_form');
+        fetch('/', {
+            method: 'POST',
+            body: data,
+        }).then(() => {
+            modalOpen("Messaggio inviato!", "Grazie per avermi contattato, risponderò al più presto.", true);
+        }).catch(error => {
+            modalOpen("OoooPS!", "Mi dispiace, ma si è verificato un errore durante l'invio del messaggio. Riprovare più tardi.", false);
+        });
     }
     //End function to return submit
 
@@ -74,6 +60,7 @@
         }else {
             $('.modal-image').append('<i class="far fa-times-circle fa-3x"></i>');
         }
+        $('#contact_form')[0].reset();
     };
 
     function modalClose() {
