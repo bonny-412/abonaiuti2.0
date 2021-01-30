@@ -161,6 +161,11 @@ input[type="submit"],
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 10px 10px -8px rgba(0,0,0,.3);
+  cursor: pointer;
+}
+
+.lmpixels-arrows-nav div:hover {
+  cursor: pointer;
 }
 
 .btn-primary:last-child,

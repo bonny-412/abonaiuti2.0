@@ -22,7 +22,6 @@ max-width: calc(100% - 330px);
 }
 
 @media only screen and (max-width: 1024px) {
-
     .header {
     position: absolute;
     width: 100%;
@@ -237,6 +236,9 @@ max-width: calc(100% - 330px);
 
 
 @media only screen and (max-width: 768px) {
+    #pointer-dot, #pointer-ring {
+        visibility: hidden;
+    }
     .portfolio-grid figure {
     width: 50%;
     }
@@ -291,6 +293,10 @@ max-width: calc(100% - 330px);
 
 
 @media only screen and (max-width: 480px) {
+    #pointer-dot, #pointer-ring {
+        visibility: hidden;
+    }
+    
     .section-title-block.first-style .section-description {
     margin: 7px 0 0;
     width: 100%;
