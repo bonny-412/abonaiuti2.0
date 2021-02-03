@@ -21,13 +21,13 @@
 }
 
 .white {
-  --bg-body: #f5f6fa;
+  --bg-body: #cfcfcf;
   --color-shadow: 0 1px 15px 0 hsl(0deg 0% 0% / 83%);
   --bg-primary: #fff;
   --color-txt: gray;
-  --color-txt-period: #aaa;
-  --color-txt-company: #a5a6a7;
-  --color-txt-body: #d5d5d5;
+  --color-txt-period: rgb(148, 147, 147);
+  --color-txt-company: #89898a;
+  --color-txt-body: #bdbdbd;
   --color-txt-title: #4f4f4f;
   --bg-item-portfolio: rgba(243, 243, 243, 0.05);
 }
