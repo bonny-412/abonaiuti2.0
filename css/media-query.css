@@ -239,7 +239,7 @@ max-width: calc(100% - 330px);
     #pointer-dot, #pointer-ring {
         visibility: hidden;
     }
-    .portfolio-grid figure {
+    .portfolio-grid .card {
     width: 50%;
     }
 
@@ -257,14 +257,9 @@ max-width: calc(100% - 330px);
     width: 100%;
     }
 
-    .portfolio-grid figure,
-    .portfolio-grid.three-columns figure {
+    .portfolio-grid .card,
+    .portfolio-grid.three-columns .card {
     width: 50%;
-    }
-
-    .portfolio-grid.four-columns figure,
-    .portfolio-grid.five-columns figure {
-    width: 33.3333333%;
     }
 
     .page-portfolio-loaded .portfolio-page-wrapper {
@@ -302,20 +297,20 @@ max-width: calc(100% - 330px);
     width: 100%;
     }
 
-    .portfolio-grid figure {
+    .portfolio-grid .card {
     width: 100%;
     }
 
-    .portfolio-grid.three-columns figure,
-    .portfolio-grid.two-columns figure {
+    .portfolio-grid.three-columns .card,
+    .portfolio-grid.two-columns .card {
     width: 100%;
     }
 
-    .portfolio-grid figure,
-    .portfolio-grid.two-columns figure,
-    .portfolio-grid.three-columns figure,
-    .portfolio-grid.four-columns figure,
-    .portfolio-grid.five-columns figure {
+    .portfolio-grid .card,
+    .portfolio-grid.two-columns .card,
+    .portfolio-grid.three-columns .card,
+    .portfolio-grid.four-columns .card,
+    .portfolio-grid.five-columns .card {
     width: 100%;
     }
 

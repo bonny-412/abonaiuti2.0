@@ -12,24 +12,30 @@
   --bg-body: #1e1e2f;
   --color-shadow: 0 1px 20px 0 rgb(0 0 0 / 75%);
   --bg-primary: #27293d;
+  --bg-card: #fff;
   --color-txt: #eee;
   --color-txt-period: #aaa;
   --color-txt-company: #a5a6a7;
   --color-txt-body: #d5d5d5;
   --color-txt-title: #f5f5f5;
   --bg-item-portfolio: rgba(0,0,0,.05);
+  --color-corner-project: #d4cd96;
+  --color-blue: #04b4e0;
 }
 
 .white {
   --bg-body: #cfcfcf;
   --color-shadow: 0 1px 15px 0 hsl(0deg 0% 0% / 83%);
   --bg-primary: #fff;
+  --bg-card: #27293d;
   --color-txt: gray;
   --color-txt-period: rgb(148, 147, 147);
   --color-txt-company: #89898a;
   --color-txt-body: #bdbdbd;
   --color-txt-title: #4f4f4f;
   --bg-item-portfolio: rgba(243, 243, 243, 0.05);
+  --color-corner-project: #383838;
+  --color-blue: #04b4e0;
 }
 
 html {

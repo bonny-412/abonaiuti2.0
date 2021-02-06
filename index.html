@@ -33,7 +33,6 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
     <link rel="stylesheet" href="css/pointer.css">
-    <link rel="stylesheet" href="css/jquery.minipreview.css">
     
     <!-- Personal CSS -->
     <link rel="stylesheet" href="css/main.css" type="text/css">
@@ -494,21 +493,82 @@
 
                         <!-- Portfolio Grid -->
                         <div class="portfolio-grid three-columns">
-                          <figure class="item standard">
-                            <div class="portfolio-item-img">
-                              <img src="img/wiseTimer_logo.png" alt="WiseTimer" title="" />
-                              <a href="https://wisetimer.netlify.app/" target="_blank" title=""></a>
+                            <!-- WISETIMER -->
+                            <div class="card">
+                                <input type="checkbox" id="cardWiseTimer" class="more" aria-hidden="true">
+                                <div class="content-card" id="contentWT">
+                                    <div class="front" style="background-image: url('img/wiseTimer_logo.png')">
+                                        <div class="inner">
+                                            <h2>WiseTimer</h2>
+                                            <label for="cardWiseTimer" class="button" aria-hidden="true">
+                                                Info
+                                            </label>
+                                        </div>
+                                        <div class="corner corner1"></div>
+                                        <div class="corner corner2"></div>
+                                        <div class="corner corner3"></div>
+                                        <div class="corner corner4"></div>
+                                    </div>
+                                    <div class="back">
+                                        <div class="inner">
+                                            <div class="card-description">
+                                              <p>
+                                                WiseTimer è un'applicazione per smartphone Android.
+                                                Ti consente di avviare un timer / cronometro in un istante.
+                                              </p>
+                                            </div>
+                                            <label for="cardWiseTimer" class="button return" aria-hidden="true">
+                                                <i class="fas fa-arrow-left"></i>
+                                            </label>
+                                            <a class="button viewSite" href="https://wisetimer.netlify.app/" target="_blank">
+                                              <i class="far fa-eye"></i>
+                                            </a>
+                                        </div>
+                                        <div class="corner corner1"></div>
+                                        <div class="corner corner2"></div>
+                                        <div class="corner corner3"></div>
+                                        <div class="corner corner4"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="name">WiseTimer</h4>
-                          </figure>
-
-                          <figure class="item standard">
-                            <div class="portfolio-item-img">
-                              <img src="img/wiseFrame_logo.png" alt="WiseFrame" title="" />
-                              <a href="https://wiseframe.netlify.app/" target="_blank" title=""></a>
-                            </div>
-                            <h4 class="name">WiseFrame</h4>
-                          </figure>
+                            <!-- WISEFRAME -->
+                            <div class="card">
+                              <input type="checkbox" id="cardWiseFrame" class="more" aria-hidden="true">
+                              <div class="content-card" id="contentWF">
+                                  <div class="front" style="background-image: url('img/wiseFrame_logo.png')">
+                                      <div class="inner">
+                                          <h2>WiseFrame</h2>
+                                          <label for="cardWiseFrame" class="button" aria-hidden="true">
+                                              Info
+                                          </label>
+                                      </div>
+                                      <div class="corner corner1"></div>
+                                      <div class="corner corner2"></div>
+                                      <div class="corner corner3"></div>
+                                      <div class="corner corner4"></div>
+                                  </div>
+                                  <div class="back">
+                                      <div class="inner">
+                                          <div class="card-description">
+                                            <p>
+                                              WiseFrame è un'applicazione per smartphone Android.
+                                              Ti consente di avviare un timer / cronometro in un istante.
+                                            </p>
+                                          </div>
+                                          <label for="cardWiseFrame" class="button return" aria-hidden="true">
+                                              <i class="fas fa-arrow-left"></i>
+                                          </label>
+                                          <a class="button viewSite" href="https://wiseframe.netlify.app/" target="_blank">
+                                            <i class="far fa-eye"></i>
+                                          </a>
+                                      </div>
+                                      <div class="corner corner1"></div>
+                                      <div class="corner corner2"></div>
+                                      <div class="corner corner3"></div>
+                                      <div class="corner corner4"></div>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
                       </div>
                       <!-- End of Portfolio Content -->
@@ -627,7 +687,6 @@
     <script src="js/typed.js"></script>
     <script src='js/jquery.shuffle.min.js'></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.minipreview.js"></script>
     <script src="js/validator.js"></script>
     <script src="js/pointer.js"></script>
 
