@@ -134,18 +134,6 @@
                 ringSize: 15,
                 ringClickSize: 10
             });
-
-            /*$('.more').on('change', function() {
-                if($(this).is(":checked")) {
-                    debugger;
-                    let idNow = $(this).attr("id");
-                    $('.content-card').each(function(index) {
-                        if(idNow != $(this).attr('id')) {
-                            $(this).attr('checked', false);
-                        }
-                    });
-                }
-            });*/
     
             //Start Typed text
             let elements = document.getElementsByClassName('txt-rotate');
