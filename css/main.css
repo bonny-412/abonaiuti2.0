@@ -21,6 +21,7 @@
   --bg-item-portfolio: rgba(0,0,0,.05);
   --color-corner-project: #d4cd96;
   --color-blue: #04b4e0;
+  --color-logo-ab: #ffffff;
 }
 
 .white {
@@ -36,6 +37,7 @@
   --bg-item-portfolio: rgba(243, 243, 243, 0.05);
   --color-corner-project: #383838;
   --color-blue: #04b4e0;
+  --color-logo-ab: #4f4f4f;
 }
 
 html {
